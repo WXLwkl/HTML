@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>默认演示</title>
+	<link rel="stylesheet" href="swiper.min.css">
+	<style>
+		.swiper-container{
+			width: 500px;
+			height: 300px;
+			margin: 20px auto;
+		}
+		.swiper-slide{
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #00F;
+		}
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">第一页</div>
+			<div class="swiper-slide">第二页</div>
+			<div class="swiper-slide">第三页</div>
+			<div class="swiper-slide">第四页</div>
+			<div class="swiper-slide">第五页</div>
+		</div>
+	</div>
+	<script src='swiper.min.js'></script>
+	<script>
+		var swiper = new Swiper('.swiper-container');
+	</script>
+</body>
+</html>

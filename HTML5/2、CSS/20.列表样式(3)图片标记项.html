@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>图片列表项</title>
+	<style>
+		li{
+			border: 1px solid red;
+		}
+		body{
+			background-color: green;
+		}
+		ul{
+			border: 1px solid red;
+			list-style: none outside url(1.png);
+		}
+		ol{
+			border: 1px solid red;
+			list-style-type: lower-roman;
+			list-style-position: inside;
+			list-style-image: url(1.png);
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>tea</li>
+		<li>green tea</li>
+		<li>red tea</li>
+	</ul>
+	<ol>
+		<li>tea</li>
+		<li>green tea</li>
+		<li>red tea</li>
+	</ol>
+</body>
+</html>
+
+<!--
+
+列表标记项图片
+list-style:type  position  image
+list-style-type none circle
+list-style-position
+outside默认值。保持标记位于文本的左侧
+列表项目标记放置在文本以外，且环绕文本不根据标记对齐。
+list-style-image：url()
+
+
+ -->
+
+

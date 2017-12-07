@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>圆角属性</title>
+	<style type="text/css">
+		#rcorner1{
+			border-radius: 50px/15px;/*border-radius是一种缩写方法。如果“/”前后的值都存在，那么“/”前面的值设置其水平半径，“/”后面值设置其垂直半径。*/
+			background: green;
+			padding: 20px;
+			width: 200px;
+			height: 150px;
+		}
+		#rcorner2{
+
+			border-radius: 25px/50px;
+			background: green;
+			padding: 20px;
+			width: 200px;
+			height: 150px;
+		}
+		#rcorner3{
+			border-radius: 50%;
+			background: blue;
+			padding: 20px;
+			width: 200px;
+			height: 150px;
+		}
+	</style>
+</head>
+<body>
+	<p>椭圆边框1</p>
+	<p id="rcorner1"></p>
+	<p>椭圆边框2</p>
+	<p id="rcorner2"></p>
+	<p>椭圆边框3</p>
+	<p id="rcorner3"></p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>canvas封闭路径</title>
+	<style type="text/css">
+		#cvs{
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="cvs" width="300px" height="300px">
+	你的浏览器不支持canvas标签
+	</canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("cvs");
+		var cxt = canvas.getContext("2d");
+
+		cxt.beginPath();
+		cxt.strokeStyle = "green";
+		cxt.lineWidth = 5;
+		cxt.fillStyle = "red";
+		cxt.moveTo(20,20);
+		cxt.lineTo(80,30);
+		cxt.lineTo(180,20);
+		cxt.fill();
+		cxt.closePath(); //封闭路径 如果放在stroke(绘制)后面 就不会是闭合的了。
+		cxt.stroke();
+
+
+		cxt.beginPath(); //当要开启新的路径，并设置属性时，要通过beginPath
+		cxt.strokeStyle = "yellow";
+		cxt.lineWidth = 8;
+		cxt.moveTo(40,40);
+		cxt.lineTo(100,40);
+		cxt.lineTo(200,80);
+
+		cxt.stroke();
+		cxt.closePath();
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>绝对定位 absolute</title>
+	<style type="text/css">
+		.div1{
+			background: green;
+			width: 200px;
+			height: 200px;
+		}
+		.div2{
+			background: pink;
+			width: 300px;
+			height: 200px;
+			position: absolute;
+		}
+		.p1{
+			position: absolute;
+			right: 40px;
+			top: 40px;
+		}
+		.p2{
+			position: absolute;
+			right: 40px;
+			top: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<p class="p1">相对于窗口定位</p>
+	</div>
+	<div class="div2">
+		<p class="p2">相对于父类定位</p>
+	</div>
+</body>
+</html>
+
+
+<!--
+
+absolute 绝对定位
+绝对定位的元素的位置是相对于最近的已定位的父元素，如果元素没有已定位的父元素，那么它的定位就是相对于窗口。
+position：absolute
+top bottom right left
+
+ -->

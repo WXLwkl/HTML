@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实现一个计数器</title>
+</head>
+<body>
+	<input type="button" onclick="start();" value="开始计数">
+	<input type="button" onclick="stop();" value="停止计数">
+	<h1 id="tt"></h1>
+	<script type="text/javascript">
+		var count=0;
+		var task1=null;
+		function start(){
+			// 每隔1000毫秒执行1次startCount
+			if (!task1) {
+				task1=setInterval(startCount,1000);
+			}
+
+		}
+		function startCount(){
+			count++;
+			document.getElementById("tt").innerHTML="计数："+count;
+		}
+		function stop(){
+			if (task1) {
+				clearInterval(task1);
+				task1=null;
+			}
+
+		}
+	</script>
+</body>
+</html>

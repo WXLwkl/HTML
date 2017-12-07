@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax</title>
+</head>
+<body>
+	手机号：<input type="text" id="mobile"><br>
+	<input id="bt01" type="button" value="查询">
+	<script type="text/javascript">
+		var xmlHttp;
+		function geturl(){
+			//创建请求对象
+			createXMLHttpRequest();
+			//发送请求
+			var url="http://www.h5edu.cn/Public/weixin/test01.php";
+			var param="tel="+document.getElementById("mobile").value;
+			send(url,"get",param);
+			//调用回调函数处理返回结果
+		}
+		function createXMLHttpRequest(){
+			if (window.ActiveObject) {
+				xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+			} else {
+				xmlHttp=new XMLHttpRequest();
+			}
+		}
+		function send(url,method,param){
+			xmlHttp.open(method,url,true);
+			xmlHttp.onreadystatechange=callback;
+			xmlHttp.send(param);
+		}
+		function callback(){
+			var result;
+			if (xmlHttp.readyState==4) {
+				if (xmlHttp.status==200) {
+					result=xmlHttp.responseTest;
+					alert("返回结果:"+result);
+				}
+			}
+		}
+		document.getElementById("bt01").onclick=geturl;
+	</script>
+</body>
+</html>

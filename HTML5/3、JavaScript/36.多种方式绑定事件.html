@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多种方式绑定事件</title>
+</head>
+<body>
+	<div id="ddd">
+		js事件编程
+	</div>
+	<!-- <input type="button" value="test" onclick="show();"> -->
+	<input type="button" value="test" id="bt01">
+	<script type="text/javascript">
+		function show(){
+			var obj=document.getElementById("ddd");
+			alert(ddd.innerText);
+		}
+		//获取bt01对象
+		var bto1=document.getElementById("bt01");
+		// bt01.onclick=show;
+		//对象.事件=事件处理函数
+		bt01.onclick=function(){
+			alert("baidu");
+		}
+	</script>
+</body>
+</html>

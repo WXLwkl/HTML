@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Mobile 按钮图标</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	</head>
+<body>
+
+	<div data-role="page" id="pageone">
+	  <div data-role="header">
+		  <a href="#" data-role="button" data-icon="home">首页</a>
+		  <a href="#" data-role="button" data-icon="add">搜索</a>
+	    <h1>欢迎访问我的主页</h1>
+	    <a href="#" data-role="button" data-icon="search">搜索</a>
+
+	  </div>
+
+	  <div data-role="content">
+		  <a href="#anylink" data-role="button" data-icon="search">搜索</a>
+		  <!-- 您也能够规定图标被放置的位置：上、右、下或左。
+请使用 data-iconpos 属性来规定位置： -->
+		  <a href="#anylink" data-role="button" data-icon="search" data-iconpos="top">上</a>
+		<a href="#link" data-role="button" data-icon="search" data-iconpos="right">右</a>
+		<a href="#link" data-role="button" data-icon="search" data-iconpos="bottom">下</a>
+		<a href="#link" data-role="button" data-icon="search" data-iconpos="left">左</a>
+		<!-- 如果只需显示图标，请将 data-iconpos 设置为 "notext" -->
+		<a href="#link" data-role="button" data-icon="search" data-iconpos="notext">搜索</a>
+	  </div>
+
+	  <div data-role="footer">
+		  <h1>页脚文本</h1>
+	  </div>
+	</div>
+</body>
+</html>

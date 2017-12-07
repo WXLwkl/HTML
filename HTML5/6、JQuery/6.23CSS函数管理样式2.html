@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>css函数修改对象样式</title>
+	<style type="text/css">
+		input{
+			width: "30%";
+			height: 80px;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<div>
+		<p>baidu是一个神奇的网站</p>
+	</div>
+	<input id="btred" type="button" value="红">
+	<input id="btblue" type="button" value="绿">
+	<input id="btyellow" type="button" value="黄">
+	<script>
+		$("#btred").click(function(){
+			$("p").css("color","red");
+		});
+		$("#btblue").click(function(){
+			$("p").css("color","blue");
+		});
+		$("#btyellow").click(function(){
+			$("p").css("color","yellow");
+		});
+	</script>
+</body>
+</html>

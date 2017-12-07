@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取文档的父子标签</title>
+</head>
+<body>
+	<div>
+		<p>这是第一个段落</p>
+		<a href="http://www.baidu.com">baidu</a>
+		<p id="p1">
+			<h4>ppp</h4>
+			<div>
+				kkkk
+			</div>
+		</p>
+		<h3>你好这里是h3</h3>
+	</div>
+	<script type="text/javascript">
+		var p1=document.getElementById("p1");
+		//查找父节点
+		alert(p1.parentNode.nodeName);
+		//查找当前标签的所有子标签
+		var str="";
+		for(var n=0;n<p1.childNodes.length;n++)
+		{
+			str=str+p1.childNodes[n].nodeName+",";
+		}
+		alert("所有子标签"+str);
+	</script>
+</body>
+</html>

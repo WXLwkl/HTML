@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>next函数使用</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<input id="t1" type="radio" value="0" name="type">
+	<p>好</p>
+	<input type="radio" value="0" name="type"><p>中</p>
+	<input type="radio" value="0" name="type"><p>差</p>
+	<script>
+		$(function(){
+			$("#t1").next().css("color","red");
+			$(":radio").click(function(){
+				$("input:radio").next().css("color","#000000");
+				$(this).next().css("color","blue");
+			});
+
+		});
+	</script>
+</body>
+</html>

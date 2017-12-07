@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>可见性过滤器</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<input type="hidden" value="test">
+	<input type="text" value="王一">
+	<input id="bt01" type="button" value="获取hidden对象的value">
+	<input id="bt02" type="button" value="获取可见对象text内容">
+	<script>
+		$(function(){
+			$("#bt01").click(function(){
+				// hidden是隐藏对象过滤器
+				alert($("input:hidden").val());
+			});
+			$("#bt02").click(function(){
+				// visible是显示对象的过滤器
+				alert($("input:visible").val());
+			});
+		});
+	</script>
+</body>
+</html>

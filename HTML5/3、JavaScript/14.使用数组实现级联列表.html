@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>使用数组实现级联列表</title>
+    </head>
+    <body>
+    菜品类别:
+    <select id="sType" onChange="change();"></select>
+    <select id="sMenu"></select>
+    <script>
+      //定义菜品类别数组和菜品数组
+      var menuType=['凉菜','热菜','主食'];
+      var menu=[['拍黄瓜','泡椒凤爪','火山下雪'],
+                ['宫保鸡丁','红烧肉','木须肉'],
+                ['米饭','馒头','个的汤']];
+
+      var stype=document.getElementById("sType");
+      var str="";
+      //将数组的内容赋值到标签中
+      for(var n=0;n<menuType.length;n++)
+      {
+          str=str+"<option value='"+n+"'>"+menuType[n]+"</option>";
+      }
+      // document.write(str);
+      stype.innerHTML=str;
+      str="";
+      //显示列表
+      for(var n=0;n<menu[0].length;n++)
+      {
+            str=str+"<option>"+menu[0][n]+"</option>";
+      }
+      var smenu=document.getElementById("sMenu");
+      smenu.innerHTML=str;
+      //定义函数回调
+      function change()
+      {
+          //alert(stype.value);
+          //修改这个类别对应的菜品
+          smenu.innerHTML="";
+          str="";
+          var row=parseInt(stype.value);
+          for(var n=0;n<menu[row].length;n++)
+          {
+                str=str+"<option>"+menu[row][n]+"</option>";
+          }
+          //alert(str);
+          smenu.innerHTML=str;
+      }
+    </script>
+    </body>
+</html>

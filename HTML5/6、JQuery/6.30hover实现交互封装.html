@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>hover交互处理</title>
+	<style type="text/css">
+		#div1{
+			width: 100px;
+			height: 100px;
+			background-color: #7f7f7f;
+		}
+		#inner1{
+			background-color: green;
+		}
+		#div2{
+			width: 100px;
+			height: 100px;
+			background-color: #afafaf;
+		}
+		#inner2{
+			background-color: blue;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<div id="div1">
+	div1
+	<div id="inner1">inner1</div>
+	</div>
+	<div id="div2">
+	div2
+	<div id="inner2">inner2</div>
+	</div>
+	<script>
+		$(function(){
+			$("#inner1").mouseover(function(){
+				alert("inner1 mouseover");
+			});
+			$("#inner1").mouseout(function(){
+				alert("inner1 mouseout");
+			});
+			$("#inner2").hover(function(){
+				alert("inner2"+event.type);
+				// $("#div2").html(event.type).append();
+			});
+		});
+	</script>
+</body>
+</html>

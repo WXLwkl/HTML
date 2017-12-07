@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>jQueryDOM编程</title>
+	<style>
+		#content{
+			border: 1px solid blue;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<input id="bt01" type="button" value="添加元素">
+	<div id="content"></div>
+	<script>
+		$(function(){
+			$("#bt01").click(function(){
+				//动态创建DOM对象
+				var newobj=$("<p/>").css("color","red").html("baidu");
+				newobj.appendTo("#content");
+			});
+		});
+	</script>
+</body>
+</html>

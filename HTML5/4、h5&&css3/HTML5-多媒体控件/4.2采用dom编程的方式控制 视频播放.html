@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>采用dom编程的方式控制 视频播放</title>
+</head>
+<body>
+	<video src="res/1.mp4" poster="1.png" id="video" width="420" controls="controls"></video><br>
+	<input type="button" onclick="play()" value="播放/暂停">
+	<input type="button" onclick="normal()" value="复原">
+	<button onclick="max()">max</button>
+	<button onclick="min()">min</button>
+	<script>
+		var video = document.getElementById("video");
+		function play() {
+			if (video.paused) {
+				video.play();
+			} else {
+				video.pause();
+			}
+		}
+		function normal(){
+			video.width = 420;
+		}
+		function min(){
+			video.width = 320;
+		}
+		function max(){
+			video.width = 520;
+		}
+	</script>
+</body>
+</html>

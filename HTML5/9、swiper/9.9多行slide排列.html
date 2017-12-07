@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>多行slide排列</title>
+	<link rel="stylesheet" href="swiper.min.css">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background: #eee;
+		}
+		.swiper-container{
+			width: 100%;
+			height: auto;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.swiper-slide{
+			text-align: center;
+			font-size: 28px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #fff;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">第一页<img src="1.png"></div>
+			<div class="swiper-slide">第二页<img src="1.png"></div>
+			<div class="swiper-slide">第三页<img src="1.png"></div>
+			<div class="swiper-slide">第四页<img src="1.png"></div>
+			<div class="swiper-slide">第五页<img src="1.png"></div>
+			<div class="swiper-slide">第六页<img src="1.png"></div>
+			<div class="swiper-slide">第七页<img src="1.png"></div>
+			<div class="swiper-slide">第八页<img src="1.png"></div>
+			<div class="swiper-slide">第九页<img src="1.png"></div>
+			<div class="swiper-slide">第十页<img src="1.png"></div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<script src="swiper.min.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container',{
+            pagination:'.swiper-pagination',
+            paginationClickable:true,
+            slidesPerView:3,
+            spaceBetween:10,
+            slidesPerColumn:2,
+            freeMode:true
+        });
+	</script>
+</body>
+</html>

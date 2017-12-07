@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js中的按键事件</title>
+	<style type="text/css">
+		#imlogo{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+	</style>
+</head>
+<body onkeydown="fun();">
+	<img id="imlogo" src="1.jpg" width="20%" height="20%">
+	<script>
+      var x=0;
+      var y=0;
+       function fun()
+       {   //获取图片对象
+           var img=document.getElementById("imlogo");
+           var code=event.keyCode;//获取按下按键的编码
+           //document.write(code);
+           switch(code)
+           {
+               case 37://左
+               x=x-10;
+               break;
+               case 39://右
+               x=x+10;
+               break;
+               case 38://上
+               y=y-10;
+               break;
+               case 40://下
+               y=y+10
+               break;
+           }
+           img.style.top=y+"px";
+           img.style.left=x+"px";
+       }
+      </script>
+</body>
+</html>

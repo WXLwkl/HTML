@@ -1,0 +1,25 @@
+<!doctype html>
+<htmL>
+<head>
+    <title>AngularJS控制器实例</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller=myCtrl>
+        名：
+        <input type="text" ng-model="fristName">
+        性：
+        <input type="text" ng-model="lastname">
+        <p>姓名：{{fristName+''+lastname}}</p>
+        <p>姓名：{{fristName}}{{lastname}}</p>
+    </div>
+    <script>
+        var app=angular.module("myApp",[]);
+        app.controller("myCtrl",function($scope){
+            $scope.lastname="度";
+            $scope.fristName="百";
+        });
+    </script>
+</body>
+</htmL>

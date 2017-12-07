@@ -1,0 +1,35 @@
+<html>
+    <head>
+     <meta charset="utf-8">
+     <title>常用系统函数</title>
+    </head>
+    <body>
+        <h1>常用系统函数</h1>
+        <script>
+        var str="33.5";
+        document.write(parseInt(str));
+        //获取变量的数据类型
+        document.write(typeof(str));
+        //eval 执行一个表达式
+        document.write(eval("3+3*4-5"));
+
+        function test()
+        {
+            var sum=0;
+            // alert(arguments.length);
+            for(var i=0;i<arguments.length;i++)
+            {// alert(arguments[i]);
+               sum=sum+arguments[i];
+            }
+            return sum;
+        }
+        //调用函数，传递参数
+        var s=test(11,22,33,55);
+        document.write("<br>求和之后="+s);
+        //判断对象是否为空
+        var ss;
+        document.write(isNaN(ss));
+
+        </script>
+    </body>
+</html>

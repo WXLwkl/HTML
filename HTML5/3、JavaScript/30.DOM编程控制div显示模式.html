@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>控制div的overflow</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 100px;
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>控制div的overflow</h1>
+	<div id="div1">
+		h5edu提供完整的H5学习路线图，先要学习html，css，javascript
+            还要学习html5新增标签，HTML5的CANVAS编程，CSS3新增样式和选择器
+            JQuery框架，bootstrap。。。框架...
+	</div>
+	<br>
+	<br>
+	<input type="button" onclick="setOverflow('hidden');" value="hidden">
+	<input type="button" onclick="setOverflow('visible');" value="visible">
+	<input type="button" onclick="setOverflow('auto');" value="auto">
+
+	<script>
+		function setOverflow(type) {
+			document.getElementById("div1").style.overflow=type;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>判断学生成绩</title>
+</head>
+<body>
+	<h1>判断学生成绩</h1>
+	成绩：<input type="text" id="score"><br>
+	<input type="button" value="判断" onclick="fun1();">
+	<script>
+	function fun1()
+	{
+		var inputScore=document.getElementById("score").value;
+		var chengji;
+		if (inputScore>=60) {
+			chengji="成绩合格";
+		} else {
+			chengji="成绩不合格";
+		}
+		alert(chengji);
+
+	}
+
+	</script>
+</body>
+</html>

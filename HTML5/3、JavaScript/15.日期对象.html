@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<!-- <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> -->
+	<meta charset="utf-8">
+	<title>日期对象</title>
+</head>
+<body>
+
+	<script>
+		var now = new Date();
+		document.write(now);
+
+		// 输出年月日
+		var year=now.getYear();
+		// 月份是从0开始的
+		var month=now.getMonth()+1;
+	 	var day=now.getDay();
+	 	// alert(year);
+	 	// alert(month);
+	 	// alert(day);
+	 	document.write("<br>"+year+"-"+month+"-"+day);
+
+	</script>
+
+</body>
+</html>

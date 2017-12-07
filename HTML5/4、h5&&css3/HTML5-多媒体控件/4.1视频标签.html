@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>h5中的视频标签</title>
+	<style type="text/css">
+		video{
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<!-- loop是否重复播放 loop为重复播放
+	autoplay是否为自动播放 默认不自动播放
+	controls控制面板
+	 -->
+	<video src="res/1.mp4" loop="loop" autoplay="autoplay" controls="controls">您的浏览器当前不支持video标签</video>
+	<h3>插入不同格式的视频文件</h3>
+	<video controls="controls" width="200" height="200" poster="1.png">
+	<source src="res/1.mp4" type="video/mp4">
+	您的浏览器当前不支持video标签
+	</video>
+</body>
+</html>

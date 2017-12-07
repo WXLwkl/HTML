@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>CSS函数的使用</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: #afafaf;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<p>这个是段落1</p>
+	<p>这是段落2</p>
+	<input id="bt001" type="button" value="改变元素名为<p>的所有元素的背景色为#bbffaa，字体颜色为红色">
+	<input id="bt002" type="button" value="第一个段落背景颜色为红"><br>
+	<div></div>
+	<input id="bt01" type="button" value="红">
+	<input id="bt02" type="button" value="绿">
+	<input id="bt03" type="button" value="黄"><br>
+	<input id="bt04" type="button" value="缩小">
+	<script>
+		$(document).ready(function(){
+			$("#bt001").click(function(){
+				$("p").css({"color":"red","backgroundColor":"#bbffaa"});
+			});
+			$("#bt002").click(function(){
+				$("p").eq(0).css("backgroundColor","red");
+			});
+
+
+			$("#bt01").click(function(){
+				$("div").css("background-color","red");
+			});
+			$("#bt02").click(function(){
+				$("div").css("background-color","green");
+			});
+			$("#bt03").click(function(){
+				$("div").css("background-color","yellow");
+			});
+			$("#bt04").click(function(){
+				$("div").css({"width":"50px","height":"50px"});
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+<!--
+改变id为one的元素的背景为红色
+$("#one").css("backgroundColor","red");
+改变元素名为<p>的所有元素的背景色为#bbffaa，字体颜色为红色
+$("p").css({color:"red",backgroundColor:"#bbffaa"});
+改变第一个<p>元素的背景颜色为红色
+$("p"),eq(0).css("backgroundColor","red");
+改变所有<h1>元素和id为one的元素的背景色为#bbffaa
+$("h1,#one").css("backgroundColor","red");
+
+ -->

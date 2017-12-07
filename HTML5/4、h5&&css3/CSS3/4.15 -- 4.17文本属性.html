@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文字属性</title>
+	<style type="text/css">
+		h1{
+			text-shadow: 5px 5px 2px pink;
+		}
+		.text1{
+			width: 11em;
+			border:1px solid green;
+		}
+		.text2{
+			width: 11em;
+			border:1px solid yellow;
+			word-wrap: break-word; /* 这个属性就是让一个超长的单词换行*/
+		}
+
+		div{
+			white-space: nowrap; /* 自动换行*/
+			width: 12em;
+			overflow: hidden; /*超出部分的显示方式*/
+			border: 1px solid green;
+		}
+		.div1{
+			text-overflow: ellipsis; /*  ellipsis 就是以省略号的形式 */
+		}
+		.div2{
+			text-overflow: clip; /* clip 直接截断 */
+		}
+			/* 下面两个要有效果 必须在上面把 overflow 设置为hidden  并且 white-space 设置为 nowrap*/
+	</style>
+</head>
+<body>
+	<h1>baidu</h1>
+	显示文本阴影
+	<hr>
+	<p class="text1">
+        This paragraph contains a very long word:
+    thisisaveryveryveryveryveryverylongword.
+    The long word will break and wrap to the
+    next line.
+    </p>
+    <p class="text2">
+        This paragraph contains a very long word:
+    thisisaveryveryveryveryveryverylongword.
+    The long word will break and wrap to the
+    next line.
+    </p>
+
+    <hr>
+	<p>
+    The following two divs contains along
+    text that will not fit in thebox.
+    Asyou can see, the text is clipped.
+    </p>
+    <p>text-overflow:ellipsis</p>
+    <div class="div1">
+    The following two divs contains along
+    text that will not fit in thebox.
+    Asyou can see, the text is clipped.
+    </div>
+    <p>text-overflow:clip</p>
+    <div class="div2">
+    The following two divs contains along
+    text that will not fit in thebox.
+    Asyou can see, the text is clipped.
+    </div>
+
+</body>
+</html>

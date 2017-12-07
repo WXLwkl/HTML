@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>表单验证-用户登录</title>
+	<style type="text/css">
+		input{
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<h2>h5edu.cn用户登录</h2>
+	<form id="f1" name="f1" action="http:www.h5edu.cn/index.php" onsubmit="return check();" method="post">
+		用户名：<br>
+		<input type="text" name="username" onblur="endus();"><br>
+		密码：<br>
+		<input type="password" name="password"><br>
+		邮箱：<br>
+		<input type="text" name="email" onfocus="beforInput();" value="这里输入邮箱">
+		<input type="submit" value="登录">
+		<script type="text/javascript">
+		    // 让用户名获取焦点
+			document.f1.username.focus();
+			function endus(){//当用户名的输入框丢失焦点时候执行
+					var us=document.f1.username.value;
+					if (us=="") {
+						alert("对不起，用户名不能为空");
+						document.f1.username.focus();
+					}
+			}
+			function beforInput(){
+				document.f1.email.value="";
+			}
+			function check(){
+				var nowf=document.f1;//获取当前表单对象
+				//var nowf=document.forms[0];
+               // var nowf=document.getElementById("f1");
+               //判断用户名和密码不能为空
+               //alert(nowf);
+               var us=nowf.username.value;
+               var ps=nowf.password.value;
+               if (us==""||ps=="") {
+               	alert("用户名或密码不能为空");
+               	return false;
+               } else {
+               	return true;
+               }
+			}
+
+		</script>
+
+	</form>
+</body>
+</html>

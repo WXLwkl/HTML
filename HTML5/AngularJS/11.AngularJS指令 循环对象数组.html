@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <title>AngularJS指令 循环对象数组</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+
+</head>
+<body>
+    <div ng-app ng-init="names=[{name:'jani',country:'韩国'},{name:'zhang',country:'中国'}]">
+    <ul>
+        <li ng-repeat='x in names'>{{x.name+'的家乡在'+x.country}}</li>
+    </ul>
+    </div>
+</body>
+</html>

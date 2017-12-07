@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>绑定菜单演示</title>
+	<link rel="stylesheet" href="jquery.fullPage.css">
+	<script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery.fullPage.min.js"></script>
+
+	<script>
+		$(function(){
+			$('#dowebok').fullpage({
+				sectionsColor:['#1bb9cb','#4BBFC3','#7BAABE','#f90'],
+				anchors:['page1','page2','page3','page4'],
+				menu:'#menu'
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		.section{
+			text-align: center;
+			font:50px 'Yahei';
+			color: #fff;
+		}
+		#menu{
+			margin: 0;
+			padding: 0;
+			position:fixed;
+			left: 10px;
+			list-style-type: none;
+			z-index: 70;
+		}
+		#menu li{
+			float: left;
+			margin: 0 10px 0 0;
+			font-size: 14px;
+		}
+		#menu a{
+			float: left;
+			padding: 10px 20px;
+			background-color: #fff;
+			color: #333;
+			text-decoration: none;
+		}
+		#menu .active a{
+			color: #fff;
+			background-color: #333;
+		}
+	</style>
+
+</head>
+<body>
+
+	<ul id="menu">
+		<li data-menuanchor="page1" class="active"><a href="#page1">第一屏</a></li>
+		<li data-menuanchor="page2"><a href="#page2">第二屏</a></li>
+		<li data-menuanchor="page3"><a href="#page3">第三屏</a></li>
+		<li data-menuanchor="page4"><a href="#page4">第四屏</a></li>
+	</ul>
+
+	<div id="dowebok">
+		<div class="section">
+			<h3>第一屏</h3>
+			<p>fullPage-js绑定菜单演示</p>
+		</div>
+		<div class="section">
+			<h3>第一屏</h3>
+			<p>请点击右上角菜单，可以控制滚屏</p>
+		</div>
+		<div class="section">
+			<h3>第一屏</h3>
+			<p>绑定的菜单没有默认样式，你需要自行编写</p>
+		</div>
+		<div class="section">
+			<h3>第一屏</h3>
+			<p>这是最后一屏</p>
+		</div>
+	</div>
+
+</body>
+</html>

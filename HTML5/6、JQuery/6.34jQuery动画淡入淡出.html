@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>淡入淡出</title>
+	<style type="text/css">
+		input{
+			width: 30%;
+			height: 80px;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: #7f7f7f;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<input id="btfin" type="button" value="淡入">
+	<input id="btfout" type="button" value="淡出">
+	<input id="bttoggle" type="button" value="切换">
+	<div></div>
+	<script>
+		$(function(){
+			// $("#btfin").click(function(){
+			// 	$("div").fadeIn();
+			// });
+			$("#btfout").click(function(){
+				$("div").fadeOut(500);
+			});
+			$("#bttoggle").click(function(){
+				$("div").fadeToggle();
+			});
+		});
+	</script>
+</body>
+</html>

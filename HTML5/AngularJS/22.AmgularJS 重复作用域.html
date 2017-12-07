@@ -1,0 +1,21 @@
+<!doctype html>
+<htmL>
+<head>
+    <title>AmgularJS 重复作用域</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <ul>
+            <li ng-repeat="x in names track by $index">{{x}}</li>
+        </ul>
+    </div>
+    <script>
+        var app=angular.module("myApp",[]);
+        app.controller("myCtrl",function($scope){
+            $scope.names=["百度","腾讯","京东"];
+        });
+    </script>
+</body>
+</htmL>

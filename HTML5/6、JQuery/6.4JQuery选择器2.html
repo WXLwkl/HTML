@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>选择器训练</title>
+	<style type="text/css">
+		img{
+			background-color: pink;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<p>百度是全国最大的引擎公司</p>
+	<p>你好</p>
+	<div>
+		<img src="1.png" width="30%" height="30%">
+	</div>
+	<input type="button" id="bt01" value="p标签隐藏" />
+	<input type="button" id="bt02" value="全部显示" />
+	<input type="button" id="bt03" value="div，p隐藏" />
+	<script>
+		$(document).ready(function(){
+			$("#bt01").click(function(){
+				$("p").hide();
+			});
+			$("#bt02").click(function(){
+				$("*").show();
+			});
+			$("#bt03").click(function(){
+				$("div,p,#bt01").hide();
+			});
+		});
+	</script>
+</body>
+</html>

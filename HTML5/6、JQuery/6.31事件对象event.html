@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>event对象</title>
+	<style type="text/css">
+		input{
+			width: 45%;
+			height: 80px;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: #7f7f7f;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<input id="bt01" type="button" value="按钮1"><br>
+	<input id="bt02" type="button" value="按钮2">
+	<div id="div1"></div>
+	<script>
+		$(function(){
+			var callback=function(event) {
+				alert(event.type);
+				alert(event.target.id);
+			};
+		$("#bt01").click(callback);
+		$("#bt02").click(callback);
+		$("#div1").click(callback);
+		});
+	</script>
+</body>
+</html>

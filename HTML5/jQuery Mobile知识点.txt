@@ -1,0 +1,35 @@
+
+
+
+
+jQuery Mobile 表单选择菜单
+
+如果您希望在所有移动设备上显示一致外观的选择菜单，请使用 jQuery 的自定义选择菜单，data-native-menu="false" 属性
+
+如需在选择菜单中选取多个选项，请在 <select> 元素中使用 multiple 属性：multiple="multiple"
+
+通过 data-inset 属性来删除圆角
+
+
+jQuery Mobile 表单 - 滑块
+如果您希望突出显示截止滑块值的这段轨道，请添加 data-highlight="true"：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>为文本设置阴影</title>
+
+	<style type="text/css">
+		.h1{
+			/*x轴的偏移量 y轴的偏移量 模糊度 阴影颜色*/
+			text-shadow: 2px -2px 8px #ff0000;
+		}
+		.h2{
+			text-shadow: 2px 2px 4px #000000;
+			color: white;
+		}
+		.h3{
+			text-shadow: 0 0 3px #ff0000;
+		}
+	</style>
+
+</head>
+<body>
+
+	<p class="h1">欢迎来到www.baidu.com</p>
+	<p class="h2">欢迎来到www.baidu.com</p>
+	<p class="h3">欢迎来到www.baidu.com</p>
+
+</body>
+</html>
+
+
+<!--
+
+语法text-shadow:h-shadow v-shadow blur color;
+h-shadow:水平阴影的位置，允许负值。 正数偏移量向右 负数向左
+v-shadow:垂直阴影的位置，允许负值。 正数向下 负数向上
+blur:模糊的距离
+color:阴影的颜色
+
+ -->
+
+
+

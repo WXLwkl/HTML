@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>阴影</title>
+	<style type="text/css">
+		.div1{
+			width: 200px;
+			height: 100px;
+			background: yellow;
+			/*水平偏移量  垂直偏移量  模糊度  扩展半径 阴影颜色*/
+			box-shadow: 10px 10px 0px 5px gray;
+		}
+		.div2{
+			width: 200px;
+			height: 100px;
+			background: green;
+			box-shadow: 10px 10px 5px 5px gray inset;
+		}
+	</style>
+</head>
+<body>
+	<div class="div1">外阴影</div>
+	<br><br><br>
+	<div class="div2">内阴影</div>
+</body>
+</html>

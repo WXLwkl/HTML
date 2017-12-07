@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>层次选择器</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<h3>层次选择器</h3>
+	<div id="div1">
+		<p id="p2">ttt</p>
+		<h3>测试</h3>
+		<h3>你好</h3>
+		<div id="div2">
+			<img src="1.jpg" width="30%" height="30%">
+			<h3>层次选择器</h3>
+			<img src="1.jpg" width="30%" height="30%">
+			<img src="1.jpg" width="30%" height="30%">
+		</div>
+		<p id="p1">
+			<img src="1.jpg" width="30%" height="30%">
+		</p>
+	</div>
+	<script>
+		$(function(){
+			// div1里面的h3
+			$("#div1 h3").css("color","red");
+			// >表示直接子节点
+			$("#div1>h3").css("color","green");
+			// +表示后面的元素
+			$("#p2+h3").css("color","yellow");
+
+			$("h3~img").css({"width":"20%","height":"20%"});
+		});
+	</script>
+</body>
+</html>

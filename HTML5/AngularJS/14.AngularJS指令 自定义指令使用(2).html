@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>AngularJS指令 自定义指令使用(2)</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+
+</head>
+<body>
+    <div ng-app="myApp">
+    <p>类名调用</p>
+    <p class="runoob-directive"></p>
+    <p>注释调用</p>
+    <!-- directive:runoob-directive -->
+    </div>
+    <script>
+    	var app=angular.module("myApp",[]);
+    	app.directive("runoobDirective",function(){
+    		return {
+    			template:"<h3>hello world！</h3>"
+    		};
+    	});
+    </script>
+</body>
+</html>

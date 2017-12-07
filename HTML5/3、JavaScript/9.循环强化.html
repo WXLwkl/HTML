@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>循环增强</title>
+</head>
+<body>
+	<script>
+		document.write("0-100输出能被3整除的数<br>");
+		for (var i = 0; i < 100; i++) {
+			if (i%3==0) {
+				document.write(i+"\t");
+			}
+			if (i%10==0) {
+				document.write("<br>");
+			}
+		}
+	document.write("<hr>");
+	document.write("输出1-100中所有能被3整除或者尾数是3的数");
+	for (var i = 0; i < 100; i++) {
+		if (i%3==0||i%10==3) {
+			document.write(i+",");
+		}
+	}
+	document.write("<hr>");
+	var rows=6;
+	for (var i = 0; i < rows-1; i++) {
+		for (var c = i; c < rows-1; c++) {
+			document.write("&ensp;");
+		}
+		for(var star=1;star<=i*2+1;star++){
+			document.write("*");
+		}
+		document.write("<br>");
+	}
+		for(var gj=1;gj<33;gj++)
+            {
+                for(var mj=1;mj<20;mj++)
+                {
+                    for(var xj=3;xj<300;xj+=3)
+                    { var num=gj+mj+xj;//鸡的数量
+                      var money=gj*3+mj*5+xj/3;//所有钱数
+                      if(num==100&&money==100)
+                      {
+                          document.write("买法:公鸡"+gj+"母鸡"+mj+"小鸡"+xj+"<br>");
+                      }
+                    }
+                }
+            }
+
+	</script>
+</body>
+</html>

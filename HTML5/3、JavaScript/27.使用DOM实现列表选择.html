@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>列表选择</title>
+    </head>
+    <body>
+        <ul>
+            <li><input type="checkbox" name="ids[]" value="1">葡萄</li>
+            <li><input type="checkbox" name="ids[]" value="2">香蕉</li>
+            <li><input type="checkbox" name="ids[]" value="3">栗子</li>
+            <li><input type="checkbox" name="ids[]" value="4">苹果</li>
+            <li><input type="checkbox" name="ids[]" value="5">草莓</li>
+            <li><input type="checkbox" name="ids[]" value="6">桃子</li>
+        </ul>
+        <a href="javascript:selectAll();">全选</a>
+        <a href="javascript:selectNull();">全不选</a>
+        <a href="javascript:selectRev();">反选</a>
+
+
+        <script>
+         var all=document.getElementsByName("ids[]");
+         //全选
+         function selectAll(){
+             for(var i=0;i<all.length;i++)
+             {
+                 all[i].checked="true";
+             }
+         }
+         //全不选
+         function selectNull()
+         {
+             for(var i=0;i<all.length;i++)
+             {
+                 all[i].checked="";
+             }
+         }
+         //反选
+         function selectRev()
+         {
+             for(var i=0;i<all.length;i++)
+             {
+                 // if(all[i].checked)
+                 // {
+                 //     all[i].checked="";
+                 // }else{
+                 //     all[i].checked="true";
+                 // }
+
+                 all[i].checked=all[i].checked ? "":"true";
+             }
+         }
+        </script>
+    </body>
+</html>

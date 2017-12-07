@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>属性过滤器</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<img src="1.png" width="30%" height="30%"><br>
+	<img src="1.png" width="40%" alt="test"><br>
+	<img src="1.png" width="30%" alt="你好">
+	<script>
+		$(function(){
+			$("img[height]").css("border","1px solid red");
+			$("img[alt*='好']").css("border","2px solid green");
+		});
+	</script>
+</body>
+</html>

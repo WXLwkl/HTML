@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>2d转换(3)rotate</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 100px;
+			background: yellow;
+			border: 1px solid red;
+		}
+		.div2{
+			float: left;
+			transform-origin: 10px 10px;  /*离左边的距离 上边的距离 也可用 transform-origin:left top;*/
+			/* 旋转的基准点 如果不设置 那就会以div的中心点位基准点转换(eg:div3)*/
+			transform: rotate(30deg); /*  deg 度 */
+			-ms-transform: rotate(30deg);
+			-webkit-transform: rotate(30deg);
+		}
+		.div3{
+			transform: rotate(30deg);
+			-ms-transform: rotate(30deg);
+			-webkit-transform: rotate(30deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="div2">div2</div>
+	<div>div1</div>
+
+	<div class="div3">div3</div>
+</body>
+</html>

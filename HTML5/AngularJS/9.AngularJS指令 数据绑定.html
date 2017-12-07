@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>AngularJS指令 数据绑定</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+
+</head>
+<body>
+    <div ng-app ng-init="num=1;spend=2">
+    <p>请输入购买数量</p>
+    <input type="number" ng-model="num">
+    <p>请输入单价</p>
+    <input type="number" ng-model="spend">
+    <p>总价格：{{num*spend}}</p>
+    </div>
+</body>
+</html>

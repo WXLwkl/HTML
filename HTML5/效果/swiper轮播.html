@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>循环模式</title>
+	<link rel="stylesheet" href="swiper.min.css">
+	<style type="text/css">
+		.swiper-container{
+			width: 100%;
+			height: 300px;
+			background: red;
+		}
+		.swiper-slide{
+			background: #fff;
+			font-size: 38px;
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="http://sandbox.runjs.cn/uploads/rs/195/7akypjos/1.jpg"></div>
+			<div class="swiper-slide"><img src="http://sandbox.runjs.cn/uploads/rs/195/7akypjos/2.jpg"></div>
+			<div class="swiper-slide"><img src="http://sandbox.runjs.cn/uploads/rs/195/7akypjos/3.jpg"></div>
+			<div class="swiper-slide"><img src="http://sandbox.runjs.cn/uploads/rs/195/7akypjos/4.jpg"></div>
+			<div class="swiper-slide"><img src="http://sandbox.runjs.cn/uploads/rs/195/7akypjos/5.jpg"></div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<script src="swiper.min.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container',{
+			pagination:'.swiper-pagination',
+			spaceBetween:0,
+			slidesPerView:1,
+			loop:true,
+			autoplay:2500,
+			autoplayDisableOnInteracton:true
+		});
+	</script>
+</body>
+</html>

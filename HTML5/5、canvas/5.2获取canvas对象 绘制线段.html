@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>绘制线段</title>
+	<style type="text/css">
+		#cvs{
+			background: rgb(255,0,255);
+			/*width: 300px;
+			height: 300px;*/
+		}
+	</style>
+</head>
+<body>
+	<!-- canvas的大小 要写在自己的属性上，不要写在css样式上 -->
+	<canvas id="cvs">你的浏览器不支持canvas标签</canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("cvs");
+		var cxt = canvas.getContext("2d"); //设置绘图环境，获取对象指出访问绘图功能必要API。
+		cxt.lineWidth = 10; //笔触宽度
+		cxt.strokeStyle = "rgb(0,255,0)"; //笔触颜色
+		// 画布左上角为（0，0）点
+		cxt.moveTo(20,20); //把路径移动到画布中的点，不创建线条
+		cxt.lineTo(123,30); //添加一个新点，创建该店到最后定义点的线条。
+		cxt.stroke();//绘制已定义线路
+	</script>
+</body>
+</html>

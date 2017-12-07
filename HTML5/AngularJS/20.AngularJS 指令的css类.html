@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AngularJS 指令的css类</title>
+	<script src="angular.min.js"></script>
+	<style>
+		input.ng-invalid{
+			background: blue;
+		}
+		input.ng-valid{
+			background: red;
+		}
+		input.ng-pristine{
+			background: yellow;
+		}
+		input.ng-dirty{
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<form ng-app="" name="myForm">
+		输入你的名字：
+		<input name="myName" ng-model="myText" required="">
+	</form>
+</body>
+</html>

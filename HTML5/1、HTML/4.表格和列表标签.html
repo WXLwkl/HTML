@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格和列表标签</title>
+
+    <style>
+        span{
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div style="border: 1px solid green">
+        <h2>表格</h2>
+        <h3>一列</h3>
+        <table border="1">
+            <tr>
+                <td>一列</td>
+            </tr>
+        </table>
+
+        <h3>一行三列</h3>
+        <table border="1" bgcolor="#8b0000">
+            <tr>
+                <td>一列</td>
+                <td>二列</td>
+                <td>三列</td>
+            </tr>
+        </table>
+
+        <h3>三行三列</h3>
+        <table>
+            <tr>
+                <td>一行一列</td>
+                <td>一行二列</td>
+                <td>一行三列</td>
+            </tr>
+            <tr>
+                <td>二行一列</td>
+                <td>二行二列</td>
+                <td>二行三列</td>
+            </tr>
+            <tr>
+                <td>三行一列</td>
+                <td>三行二列</td>
+                <td>三行三列</td>
+            </tr>
+        </table>
+
+        <h3>没有边框</h3>
+        <table>
+            <tr>
+                <td>边框</td>
+                <td></td>
+                <td>边框</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="border: 1px solid yellow">
+        <h2>列表</h2>
+        <h3>无序列表</h3>
+            <ul>
+                <li>香蕉</li>
+                <li>苹果</li>
+                <li>梨子</li>
+            </ul>
+        <h3>有序列表</h3>
+            <ol>
+                <li>瓜子</li>
+                <li>饮料</li>
+                <li>矿泉水</li>
+            </ol>
+        <h3>自定义列表</h3>
+            <dl>
+                <dt>银嘉金服</dt>
+                <dd>上海徐家汇</dd>
+                <dt>pos机</dt>
+                <dd>M360,P27...</dd>
+            </dl>
+    </div>
+
+    <div style="border: 1px solid red">
+        <h2>div_span</h2>
+        我只想做一个<span>安静</span>的美男子！！
+    </div>
+
+</body>
+</html>
+
+<!--
+笔记：
+表格：表格是由table来定义，每个表格有n行（tr）定义，每一行n列（td）定义
+每一个单元格可以包括 文本、图片、段落、表单。。。
+表格的表头用th定义，大多数浏览器会把表头显示居中加粗
+表格的标题用caption定义。
+某一些浏览器空单元格不显示边框，我们会使用空格占位符。
+列表：
+无序列表始于 <ul> 标签。每个列表项始于 <li>。属性 ：square  circle none
+无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记。
+有序列表始于 <ol> 标签。每个列表项始于 <li> 标签。
+同样，有序列表也是一列项目，列表项目使用数字进行标记。属性：A a I i
+自定义列表不仅仅是一列项目，而是项目及其注释的组合。
+自定义列表以 <dl> 标签开始。每个自定义列表项以 <dt> 开始。
+每个自定义列表项的定义以 <dd> 开始。
+div span：
+<div> 元素是块级元素，它是可用于组合其他 HTML 元素的容器。
+div> 元素没有特定的含义。除此之外，由于它属于块级元素，浏览器会
+在其前后显示折行。
+<div> 元素的另一个常见的用途是文档布局。它取代了使用表格定义布局的老式方法。
+使用 <table> 元素进行文档布局不是表格的正确用法。
+<span> 元素是内联元素，可用作文本的容器。
+<span> 元素也没有特定的含义。
+当与 CSS 一同使用时，<span> 元素可用于为部分文本设置样式属性。
+-->

@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <title>AngularJS字符串连接</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app ng-init="str1='欢迎来到';str2='银嘉'">
+        <h3>表达式</h3>
+        {{str1+''+str2}}
+        <h3>ng-bind</h3>
+        <p ng-bind="str1+''+str2"></p>
+    </div>
+</body>
+</html>

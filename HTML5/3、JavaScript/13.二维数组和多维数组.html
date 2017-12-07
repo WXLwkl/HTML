@@ -1,0 +1,32 @@
+ <html>
+    <head>
+        <meta charset="utf-8">
+        <title>二维数组和多维数组</title>
+    </head>
+    <body>
+        <h1>二维数组和多维数组</h1>
+        <script>
+        var menutype=["凉菜","热菜","主食"];
+         var menu=[['拍黄瓜','大拌菜','水果沙拉'],
+                   ['宫保鸡丁',"红烧肉","木须肉"],
+                   ["米饭","包子","饺子"]
+                   ];
+        //  document.write(menu[0][0]);
+         for(var row=0;row<menu.length;row++)
+         {
+             document.write("<br>菜品类别:"+menutype[row]+"<br>");
+             for(var col=0;col<menu[0].length;col++)
+             {  //输出第row行第col列的菜品
+                 document.write("&nbsp;&nbsp;"+menu[row][col]);
+             }
+
+         }
+         //多维数组
+         var score=[[[1,2,3,4,5],[6,7,8,9,10]],
+                    [[1,2,3,4,5],[6,7,8,9,10]],
+                    [[1,2,99,4,5],[6,7,8,9,10]]
+                   ];
+        document.write("<br>"+score[2][0][2]);
+        </script>
+    </body>
+</html>

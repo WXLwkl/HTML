@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>分析对象的属性和方法</title>
+    </head>
+    <body>
+        <h1>分析对象的属性和方法</h1>
+        <script>
+          //分析文档对象
+          var pro="";
+          document.bgColor="pink";
+
+          for(pro in document)
+          {
+              document.write("document."+pro+"="+document[pro]+"<br>");
+          }
+          //分析自定义对象
+          var npc1=new function(){
+              this.hp=100;
+              this.act=99;
+              this.move=function(){
+                  document.write("正在移动");
+              }
+          }
+          document.write("<hr>");
+          for(pro in npc1)
+          {
+              document.write("npc1."+pro+"="+npc1[pro]+"<br>");
+          }
+        </script>
+    </body>
+</html>

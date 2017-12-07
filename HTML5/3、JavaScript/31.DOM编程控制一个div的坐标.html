@@ -1,0 +1,45 @@
+<!-- <!DOCTYPE html> -->  <!-- 不能写这个头 不然没有效果-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>使用DOM编程控制一个div的位置</title>
+	<style type="text/css">
+	      #content{
+	          border:1px solid #000000;
+	          position:absolute;
+	          left:10px;
+	          top:10px;
+	          background: pink;
+	      }
+    </style>
+</head>
+<body>
+
+	<input type="button" value="上" onclick="moveTo(px,py-10);">
+    <input type="button" value="下" onclick="moveTo(px,py+10);">
+    <input type="button" value="左" onclick="moveTo(px-10,py);">
+    <input type="button" value="右" onclick="moveTo(px+10,py);">
+    <br>
+
+	<div id="content">
+         <img src="1.png" width="100px" height="60px">
+    </div>
+
+	<script>
+        var px=100;
+        var py=100;
+        function moveTo(x, y)
+        {
+        	var obj= document.getElementById("content");
+        	obj.style.left=x;
+        	obj.style.top=y;
+        	px=x;
+        	py=y;
+        }
+        moveTo(px, py);
+    </script>
+
+</body>
+</html>
+
+

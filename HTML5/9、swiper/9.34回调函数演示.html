@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>回调函数演示</title>
+	<link rel="stylesheet" href="swiper.min.js">
+    <style>
+        html,body{
+            height:100%;
+        }
+        body{
+            margin:0;
+            padding:0;
+        }
+        .swiper-container{
+            width:100%;
+            height:100%;
+            background:#eee;
+        }
+        </style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">第一页</div>
+			<div class="swiper-slide">第二页</div>
+			<div class="swiper-slide">第三页</div>
+		</div>
+	</div>
+
+	<script src="jquery.min.js"></script>
+	<script src="swiper.min.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container',{
+            onInit:function(swiper){
+				//页面初始化时执行的函数，只执行一次
+                alert('H5EDU欢迎您');
+            },
+            onTransitionStart:function(swiper){
+                //页面过度开始的时候执行的函数
+                if(swiper.activeIndex!=1){
+                    alert('H5EDU很棒1');
+                }
+                if(swiper.activeIndex!=2){
+                    alert('H5EDU很棒2');
+                }
+
+            },
+            onTransitionEnd:function(swiper){
+                //页面过度结束后执行的函数
+                if(swiper.activeIndex==1){
+                    alert('H5EDU GOOD1')
+                }
+                if(swiper.activeIndex==2){
+                    alert('H5EDU GOOD2')
+                }
+
+
+            },
+            onClick:function(swiper){
+                //鼠标点击执行的回调函数
+                alert('点击触发');
+            }
+        });
+	</script>
+</body>
+</html>

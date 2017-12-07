@@ -1,0 +1,37 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>获取鼠标坐标</title>
+	<style type="text/css">
+		img{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+	</style>
+</head>
+<body onmousemove="move();">
+	<div id="div1"></div>
+	<img id="img1" src="http://www.h5edu.cn/Public/assets/img/logo_blue.png">
+	<script type="text/javascript">
+		var obj=document.getElementById("div1");
+		var img=document.getElementById("img1");
+		function  move(){
+			var cx=event.clientX;
+			var cy=event.clientY;
+			var sx=event.screenX;
+			var sy=event.screenY;
+			var msg="clientx="+cx+"<br>"+"  clienty="+cy+"<br>"+"   screenX="+sx+"<br>"+"   screenY="+sy;
+			obj.innerHTML=msg;//设置div里面的内容
+			window.status=msg;//设置状态条内容
+			window.document.title=msg;//设置当前文档的标题
+			//修改图片的坐标
+			img.style.top=cy+20;
+			img.style.left=cx+20;
+
+		}
+	</script>
+
+</body>
+</html>

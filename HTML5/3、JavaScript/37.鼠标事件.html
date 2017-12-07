@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标事件</title>
+	<style type="text/css">
+		#div1{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1" onclick="show(this,'yellow');" onmousemove="show(this,'red');" onmouseout="show(this,'blue');" ondblclick="show(this,'green');">
+		ttt
+	</div>
+	<script type="text/javascript">
+		function show(obj,color)
+		{
+			obj.style.backgroundColor=color;
+		}
+	</script>
+</body>
+</html>

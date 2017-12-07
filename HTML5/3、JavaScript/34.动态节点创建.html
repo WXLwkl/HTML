@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态节点创建</title>
+</head>
+<body>
+	<div id="content">
+		<img src="1.jpg" width="100px" height=100px>
+	</div>
+	<input type="button" onclick="add();" value="添加节点">
+	<script type="text/javascript">
+		function add() {
+			var newimg=document.createElement("img");
+			newimg.src="1.png";
+			newimg.style.width="100px";
+			newimg.style.height="100px";
+			newimg.style.background="pink";
+			var obj=document.getElementById("content");
+			obj.appendChild(newimg);
+		}
+	</script>
+</body>
+</html>

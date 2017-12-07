@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>在标签中添加js</title>
+	<style>
+		input{
+			width: 100px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<br>
+	<br>
+	<input type="button" value="test" onclick="alert('讨厌');" >
+	<input type="button" value="text01" onclick="fun1();">
+	<script>
+		function fun1() {
+			document.write("你好");
+			alert("我来了");
+		}
+	</script>
+</body>
+</html>
+
+<!--
+在html代码中可以把js放到html的标签事件中
+<input type="button" value="test" onclick="xxxx">
+在js编程中每个标签都会对应各种事件，如
+单击 双击 鼠标移动 鼠标离开 。。。
+当在某个标签上发生这些事件时候可以定义一个时间处理函数，如
+function fun（）
+{
+	函数体
+}
+在事件发生时就会条用这个函数
+但后面我们会介绍不在标签上直接写事件处理，因为这样会导致逻辑和页面混乱。
+ -->
+
+

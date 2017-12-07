@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>求矩形面积</title>
+</head>
+<body>
+
+	宽度:<input type="text" id="t1"><br>
+	高度:<input type="text" id="t2"><br>
+	<input type="button" value="计算" onclick="calc();"><br>
+	结果：<input type="text" id="t3">
+	<script>
+		function calc()
+		{
+			// alert("ok");
+			var w = document.getElementById("t1").value;
+			var h = document.getElementById("t2").value;
+
+			var s = w*h;
+
+			document.getElementById("t3").value=s;
+		}
+	</script>
+</body>
+</html>

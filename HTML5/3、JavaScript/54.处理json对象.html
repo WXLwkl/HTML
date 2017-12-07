@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON处理</title>
+</head>
+<body>
+	<input onclick="fun1();" type="button" value="JSON字符串转为JSON对象">
+	<input onclick="fun2();" type="button" value="JSON对象元素获取">
+	<input onclick="fun3();" type="button" value="JSON对象转为JSON字符串">
+	<script type="text/javascript">
+		var jsonstr='{"name":"Lin","age":13}';
+		var jsonobj={
+			name:"www",
+			age:99
+		};
+		function fun1(){
+			var jb=eval("("+jsonstr+")");
+			alert(jb.name);
+			alert(jb.age);
+		}
+		function fun2(){
+			alert(jsonobj.name);
+			alert(jsonobj.age);
+		}
+		function fun3(){
+			alert(JSON.stringify(jsonobj));
+		}
+	</script>
+</body>
+</html>

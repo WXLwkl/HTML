@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>滑动动画</title>
+	<style type="text/css">
+		input{
+			width: 30%;
+			height: 80px;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: #7f7f7f;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<input id="btdown" type="button" value="向下滑动">
+	<input id="btup" type="button" value="向上滑动">
+	<input id="bttoggle" type="button" value="切换">
+	<div></div>
+	<script>
+		$(function(){
+			$("#btdown").click(function(){
+				$("div").slideDown(500);
+			});
+			$("#btup").click(function(){
+				$("div").slideUp(500);
+			});
+			$("#bttoggle").click(function(){
+				$("div").slideToggle();
+			});
+		});
+	</script>
+</body>
+</html>

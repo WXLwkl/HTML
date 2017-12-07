@@ -1,0 +1,26 @@
+<!doctype html>
+<htmL ng-app="myapp">
+<head>
+    <title>控制器函数绑定</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <p>测试控制器函数绑定</p>
+    {{test()}}
+    <hr>
+    <p>测试js函数绑定</p>
+    {{test1()}}
+    <script>
+        function test1(){
+            return "百度一下 你就知道";
+        };
+        var app=angular.module("myapp",[]);
+        app.controller("myCtrl",function($scope){
+            $scope.test=function(){
+                return "百度百科";
+            }
+        });
+    </script>
+</body>
+</htmL>

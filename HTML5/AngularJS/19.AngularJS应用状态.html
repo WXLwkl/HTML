@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>AngularJS应用状态</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <form ng-app name="myForm" ng-init="myText='935858549@qq.com'">
+        email:
+        <input type="email" name="myAddress" ng-model="myText" required>
+        <p>编辑邮箱地址</p>
+        <h3>状态变化：</h3>
+        <p>valid:{{myForm.myAddress.$valid}}(输入格式正确true)</p>
+        <p>Direty:{{myForm.myAddress.$dirty}}(输入值改变为true)</p>
+        <p>Touched:{{myForm.myAddress.$touched}}(点击屏幕为true)</p>
+    </form>
+    <p>再输入框输入邮箱地址，如果格式错误提示</p>
+    <p>百度</p>
+</body>
+</html>

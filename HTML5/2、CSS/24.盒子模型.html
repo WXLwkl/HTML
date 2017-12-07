@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>盒子模型</title>
+	<style>
+		img,div{
+			border: 1px solid blue;
+			width: 400px;
+			height: 300px;
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<img src="1.gif">
+	<div>
+		这里显示盒子，添加边框。
+	</div>
+
+</body>
+</html>
+
+<!--
+
+所有HTML元素可以看作盒子，在css中，“box model”这一术语是用来设计和布局时使用。css盒子模型本质上是一个盒子，封装周围HTML元素，他包括：边距，边框，填充和实际内容。盒子模型允许我们在其他元素和周围元素的边框之间的空间放置元素。
+margin  - 清除边框区域。margin没有背景颜色，他是完全透明的
+border  - 边框周围填充的内容。边框是受到盒子的背景颜色影响的
+padding - 清除内容周围的区域。会受到框中填充的背景颜色影响
+content - 盒子的内容。显示文本和图片
+
+ -->
+

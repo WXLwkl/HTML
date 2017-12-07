@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>框架</title>
+</head>
+<!--<body>-->
+
+<!--</body>-->
+
+    <frameset rows="25%,30%,45%">
+        <frame src="daohang.html" noresize="noresize">
+        <frame src="test1.html" name="showframe">
+            <frameset cols="50%,50%">
+                <frame src="test2.html">
+                <frame src="test3.html">
+            </frameset>
+    </frameset>
+
+
+</html>
+<!--
+笔记：
+通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。
+每份HTML文档称为一个框架，并且每个框架都独立于其他的框架。
+使用框架的坏处：
+开发人员必须同时跟踪更多的HTML文档
+很难打印整张页面
+框架结构标签（<frameset>）定义如何将窗口分割为框架
+每个 frameset 定义了一系列行或列
+rows/columns 的值规定了每行或每列占据屏幕的面积
+ <frame> 标签中加入：noresize="noresize"。
+为不支持框架的浏览器添加 <noframes> 标签。
+重要提示：不能将 <body></body> 标签与 <frameset></frameset> 标签同时使用！
+-->

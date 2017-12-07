@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>设置标签的显示与隐藏</title>
+        <style type="text/css">
+            #content{
+                width:300px;
+                height:50px;
+                border:1px solid green;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>欢迎来到h5edu.cn学习javaScript编程</h1>
+        <div id="content">h5edu.cn提供了大量h5源码和微信开发源码</div>
+        <a href="javascript:show();">显示</a>
+        <a href="javascript:hide();">隐藏</a>
+       <script>
+        function show(){
+            var nowdiv=document.getElementById("content");
+            nowdiv.style.visibility="visible";//显示
+        }
+        function hide(){
+            var nowdiv=document.getElementById("content");
+            nowdiv.style.visibility="hidden";
+        }
+       </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>事件触发快捷函数</title>
+	<style type="text/css">
+		input{
+			width: 49%;
+			height: 80px;
+		}
+		#div1{
+			width: 100px;
+			height: 100px;
+			background-color: #7f7f7f;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<input id="bt01" type="button" value="click">
+	<input id="bt02" type="button" value="focus">
+	<br>
+	<div id="div1"></div>
+	<input id="us" type="text">
+	<script>
+		$(function(){
+			var flag=1;
+			$("#div1").click(function(){
+				if (flag==0) {
+					$(this).css("background-color","#7f7f7f");
+					flag=1;
+				} else {
+					flag=0;
+					$(this).css("background-color","red");
+				}
+			});
+			//触发事件
+			$("#bt01").click(function(){
+				// $("#div1").trigger("click");
+				$("#div1").click();//相当于上面的语句
+			});
+			$("#bt02").click(function(){
+				$("#us").focus();//相当于$("#us").trigger("focus");
+			});
+		});
+	</script>
+</body>
+</html>

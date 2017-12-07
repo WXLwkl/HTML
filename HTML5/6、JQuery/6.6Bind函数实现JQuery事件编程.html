@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Bind函数</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<div id="divmsg">hello baidu</div>
+	<input id="bt01" type="button" value="隐藏"><br>
+	<input id="bt02" type="button" value="显示"><br>
+	<input id="bt03" type="button" value="修改内容">
+	<script>
+		$(document).ready(function(){
+			$("#bt01").bind("click",function(){
+				$("#divmsg").hide();
+			});
+			$("#bt02").bind("click",function(){
+				$("#divmsg").show();
+			});
+			$("#bt03").bind("click",function(){
+				$("#divmsg").html("你好 百度");
+			});
+		});
+	</script>
+</body>
+</html>
+
+<!--
+通过bind函数实现JQuery对象和事件 事件处理函数的绑定
+JQuery对象.bind("事件"，事件处理函数);
+ -->

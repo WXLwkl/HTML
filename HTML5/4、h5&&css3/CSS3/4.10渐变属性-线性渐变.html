@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>渐变</title>
+	<style type="text/css">
+		div{
+			width: 300px;
+			height: 300px;
+			border-radius: 25px;
+		}
+		.linear1{
+			background: -webkit-linear-gradient(top left,red,blue);
+		}
+		/*.linear2{
+			background: -webkit-linear-gradient(top,red 50%,green 75%,blue 100%);
+		}*/
+		.linear2{
+			background: -webkit-repeating-linear-gradient(top,red 10%,green 25%,blue 50%);
+		}
+		.linear3{
+			/*角度*/
+			background: -webkit-linear-gradient(90deg,orange,purple);
+		}
+		.linear4{
+			background: -webkit-linear-gradient(top,red,orange,yellow,green,cyan,blue,purple);
+		}
+	</style>
+</head>
+<body>
+	<div class="linear1">线性渐变简单版本</div>
+	<div class="linear2">线性渐变 设置指定颜色长度</div>
+	<div class="linear3">改变方向</div>
+	<div class="linear4">彩虹渐变</div>
+</body>
+</html>

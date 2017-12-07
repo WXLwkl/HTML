@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>字符串的切割</title>
+    </head>
+    <body>
+       <h1>字符串的切割</h1>
+       <script>
+         var menu="凉菜|热菜|主食";
+         var mt=menu.split('|');//相当于mt=["凉菜","热菜","主食"]
+         for(var n=0;n<mt.length;n++)
+         {
+             document.write("<br>"+mt[n]);
+         }
+         document.write("<br>");
+         var mm=["你好","我 是","王一"];
+         var str=mm.join("@");
+         document.write("str="+str);
+         String.prototype.trim=function(){
+            // alert("去空格");
+            return this.replace(" ",'');
+         };
+         document.write(str.trim());
+       </script>
+    </body>
+</html>

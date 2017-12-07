@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>动态加载Slides</title>
+	<link rel="stylesheet" href="swiper.min.css">
+	<style>
+		body{
+			background: #eee;
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 100%;
+			height: 300px;
+			margin:20px auto;
+		}
+		.swiper-slide{
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+		}
+		.append-buttons{
+			text-align: center;
+			margin: 20px;
+		}
+		.append-buttons a{
+			display: inline-block;
+			border: 1px solid #007aff;
+			text-decoration: none;
+			padding:4px 10px;
+			border-radius: 4px;
+			font-size: 13px;
+		}
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">模拟器效果不佳<img src="1.png"></div>
+			<div class="swiper-slide">请在新窗口打开测试<img src="1.png"></div>
+			<div class="swiper-slide">银嘉1<img src="1.png"></div>
+			<div class="swiper-slide">银嘉2<img src="1.png"></div>
+			<div class="swiper-slide">银嘉3<img src="1.png"></div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<p class="append-buttons">
+		<a href="#" class="prepend-2-slides">Prepend 2 slides</a>
+		<a href="#" class="prepend-slide">Prepend slides</a>
+		<a href="#" class="append-slide">Append slides</a>
+		<a href="#" class="append-2-slides">Append 2 slides</a>
+	</p>
+	<script src="swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container',{
+                pagination:'.swiper-pagination',
+                paginationCilckable:true,
+                spaceBetween:30,
+                slidesPerView:3,
+                centeredSlides:true
+            });
+
+
+            var prependNumber = 1;
+
+            document.querySelector('.prepend-2-slides').addEventListener('click',function(e){
+                e.preventDefault();
+                swiper.prependSlide([
+                    '<div class="swiper-slide">H5EDU'+(--prependNumber)+'<img src="logo.png"></div>',
+                    '<div class="swiper-slide">H5EDU'+(--prependNumber)+'<img src="logo.png"></div>'
+                    ]);
+            });
+
+            document.querySelector('.prepend-slide').addEventListener('click',function(e){
+                e.preventDefault();
+                swiper.prependSlide([
+                    '<div class="swiper-slide">H5EDU'+(--prependNumber)+'<img src="logo.png"></div>'
+                    ]);
+            });
+
+            var appendNumber = 5;
+
+            document.querySelector('.append-slide').addEventListener('click',function(e){
+                e.preventDefault();
+                swiper.appendSlide([
+                    '<div class="swiper-slide">H5EDU'+(++appendNumber)+'<img src="logo.png"></div>'
+                    ]);
+            });
+
+            document.querySelector('.append-2-slides').addEventListener('click',function(e){
+                e.preventDefault();
+                swiper.appendSlide([
+                    '<div class="swiper-slide">H5EDU'+(++appendNumber)+'<img src="logo.png"></div>',
+                    '<div class="swiper-slide">H5EDU'+(++appendNumber)+'<img src="logo.png"></div>'
+                    ]);
+            });
+
+        </script>
+</body>
+</html>

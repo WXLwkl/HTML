@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>旋转(1)旋转线段</title>
+	<style type="text/css">
+		#cvs{
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<canvas width="300px" height="300px" id="cvs">
+		你的浏览器不支持canvas标签
+	</canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("cvs");
+		var cxt = canvas.getContext("2d");
+
+		cxt.beginPath();
+		cxt.moveTo(200,200);
+		cxt.lineTo(250,200);
+		cxt.stroke();
+		cxt.closePath();
+
+		cxt.save(); //设置旋转环境
+		cxt.translate(200,200); //重新映射画布（0，0）点  把（200，200）当成（0，0）点
+		cxt.rotate(-90*Math.PI/180); //旋转角度（弧度） - 为逆时针旋转
+		cxt.beginPath();
+		cxt.moveTo(0,0);
+		cxt.lineTo(50,0);
+		cxt.stroke();
+		cxt.closePath();
+		cxt.restore(); //返回原先画布
+
+	</script>
+</body>
+</html>

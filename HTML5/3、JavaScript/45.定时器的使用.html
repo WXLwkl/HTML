@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>定时器的使用</title>
+</head>
+<body>
+	<input type="button" onclick="count();" value="开始">
+	<input type="button" onclick="start();" value="计数器开始">
+	<input type="button" onclick="stop();" value="停止计数">
+
+	<div id="content">
+		<img src="1.jpg" width="30%" height="30%">
+	</div>
+	<div id="num"></div>
+	<script type="text/javascript">
+		function count(){
+			//设置5秒以后 图片小时
+			setTimeout("hide();",5000);
+		}
+		function hide(){
+			document.getElementById("content").innerHTML="";
+		}
+		//全局变量
+		var cou=0;
+		var t1=null;
+		function start(){
+			cou=cou+1;
+			document.getElementById("num").innerHTML="计数："+cou;
+			t1=setTimeout("start();",1000);
+		}
+		function stop(){
+			clearTimeout(t1);
+		}
+	</script>
+
+</body>
+</html>

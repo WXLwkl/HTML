@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设置div的显示和隐藏</title>
+	<style type="text/css">
+		#content{
+			border: 1px solid green;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>display属性控制显示和隐藏</h1>
+	<script>
+		function display(type){
+			document.getElementById("content").style.display=type;
+		}
+	</script>
+	<a href="javascript:display('none');">隐藏</a>
+	<a href="javascript:display('block');">显示</a>
+	<div id="content">
+		百度是国内最大的搜索引擎公司<br>
+		www.baidu.com
+	</div>
+
+</body>
+</html>

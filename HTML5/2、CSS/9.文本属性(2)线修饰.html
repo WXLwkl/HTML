@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>修饰线</title>
+	<style >
+		.over{
+			text-decoration: overline;
+		}
+		.through{
+			text-decoration: line-through;
+		}
+		.underline{
+			text-decoration: underline;
+		}
+		a{
+			text-decoration: none;
+		}
+		#all{
+			text-decoration: overline line-through underline;
+			/*text-decoration: line-through;*/
+			/*text-decoration: underline;*/
+		}
+	</style>
+
+</head>
+<body>
+
+	<p class="over">这里展示上划线</p>
+	<p class="through">这里展示删除线</p>
+	<p class="underline">这里显示下划线</p>
+	<a href="#">删除链接下的下划线</a>
+	<p id="all">这里显示所有的删除线</p>
+</body>
+</html>
+
+
+<!-- 
+
+文本的线修饰
+语法：text-decoration:值；
+属性值： overline:上划线
+	    line-through：删除线
+	    underline:下划线
+	    none:不存在线修饰	
+
+ -->

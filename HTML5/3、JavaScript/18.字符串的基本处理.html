@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>字符串的基本处理</title>
+    </head>
+    <body>
+        <h1>字符串处理</h1>
+        <script>
+          var name="h5edu.cn";//定义一个字符串
+          document.write("字符串长度="+name.length);
+          for(var n=0;n<name.length;n++)
+          {
+              document.write("<br>"+name.charAt(n));
+          }
+          //获取字符串的子串
+          name="王一";
+          document.write("<br>"+name.substr(0,1));
+          var birthday="20010809";//YYYYMMDD
+          //获取这个字符串的年 月 日
+          var year=birthday.substr(0,4);
+          var month=parseInt(birthday.substr(4,2));
+          var day=parseInt(birthday.substr(6));
+          document.write("<br>年="+year);
+          document.write("<br>月="+month);
+          document.write("<br>日="+day);
+          //转化成大写 小写
+          name="James Bander";
+          document.write("<br>"+name);
+          name=name.toUpperCase();//转化成大写
+          document.write("<br>"+name);
+          name=name.toLowerCase();
+          document.write("<br>"+name);
+          </script>
+    </body>
+</html>

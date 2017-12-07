@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>创建动画</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background: yellow;
+			animation: myfrist 2s;
+			-webkit-animation: myfrist 2s;
+		}
+		@keyframes myfrist{
+			from{background: #ffff00;}
+			to{background: red;}
+		}
+		@-webkit-keyframes myfrist{
+			from{background: #ffff00;}
+			to{background: red;}
+		}
+	</style>
+</head>
+<body>
+	<div>动画元素</div>
+</body>
+</html>

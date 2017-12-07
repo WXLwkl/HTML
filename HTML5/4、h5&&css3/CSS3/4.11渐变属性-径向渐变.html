@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>径向渐变</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 100px;
+		}
+		.radial1{
+			background: -webkit-radial-gradient(center center,red,green);
+		}
+		.radial2{
+			background: -webkit-repeating-radial-gradient(center center,cyan 15%,red 25%,yellow 35%);
+		}
+		.radial3{
+			background: -webkit-radial-gradient(20px 70px,blue,pink);
+		}
+		.radial4{
+			background: -webkit-radial-gradient(center center,circle,red,green);
+		}
+		.white{
+			width: 200px;
+			height: 200px;
+			border-radius: 100px;
+			background: -webkit-radial-gradient(140px 60px, circle,blue,yellow);
+		}
+	</style>
+</head>
+<body>
+	<div class="radial1">简单版本</div>
+	<div class="radial2">指定颜色长度</div>
+	<div class="radial3">指定渐变起始位置</div>
+	<div class="radial4">指定渐变形状</div>
+	<div class="white"></div>
+</body>
+</html>

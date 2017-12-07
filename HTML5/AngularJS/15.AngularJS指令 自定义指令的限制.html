@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <title>AngularJS指令 自定义指令的限制</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp">
+        <p>类名调用</p>
+        <p class="runoob-directive"></p>
+        <p>注释调用</p>
+        <!-- directive:runoob-directive -->
+    </div>
+    <script>
+        var app=angular.module("myApp",[]);
+        app.directive("runoobDirective",function(){
+            return{
+                restrict:'EAMC',
+                replace:true,
+                template:'<h1>www.h5edu.cn欢迎你</h1>'
+            };
+        });
+    </script>
+</body>
+</html>

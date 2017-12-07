@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>link 样式</title>
+
+	<style>
+		a:visited{
+			/*链接访问后显示的属性*/
+			color: red;
+		}
+		a:hover{
+			/*鼠标移动的链接上显示的属性*/
+			background-color: green;
+		}
+		a:active{
+			/*鼠标点击链接触发的属性*/
+			background-color: #00ffff;
+			text-decoration: underline;
+		}
+		a:link{
+			/*正常状态的属性*/
+			color: blue;
+		}
+	</style>
+
+
+</head>
+<body>
+
+	<p>欢迎前往<a href="http://www.baidu.com">baidu</a>,全方位的搜索你想要的资源</p>
+
+</body>
+</html>
+
+<!--
+链接状态
+a:link： 正常状态
+a:hover: 鼠标移动上
+a:visited:用户已经访问的超链接
+a:active: 鼠标点击状态
+
+顺序
+a:link  a:visited a:hover a:active
+
+链接样式
+下划线：text-decoration:none;
+背景颜色 background-color
+
+ -->
+

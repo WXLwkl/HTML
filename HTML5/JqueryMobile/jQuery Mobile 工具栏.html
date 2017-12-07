@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Mobile 工具栏</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	</head>
+<body>
+
+	<div data-role="page" id="pageone">
+	  <div data-role="header" data-position="fixed" data-fullscreen="true">
+		  <a href="#" data-role="button" data-icon="home">首页</a>
+		  <h1>欢迎访问我的主页</h1>
+		  <!-- 如需向页眉标题的右侧添加按钮，请规定类名 "ui-btn-right" -->
+	      <a href="#" data-role="button" data-icon="search" class="ui-btn-right">搜索</a>
+	  </div>
+
+	  <div data-role="content">
+		  <h1>正文部分</h1>
+	  </div>
+
+<!-- 页脚与页眉的样式不同（它会减去一些内边距和空白，并且按钮不会居中）。如果要修正该问题，请在页脚设置类名 "ui-btn" -->
+	  <div data-role="footer" data-position="fixed" data-fullscreen="true">
+	  <!-- 选择在页脚中水平还是垂直地组合按钮  vertical-->
+	  	  <div data-role="controlgroup" data-type="horizontal">
+			  <a href="#" data-role="button" data-icon="plus">转播到新浪微博</a>
+			  <a href="#" data-role="button" data-icon="plus">转播到腾讯微博</a>
+		      <a href="#" data-role="button" data-icon="plus">转播到QQ空间</a>
+	      </div>
+	  </div>
+	</div>
+</body>
+</html>

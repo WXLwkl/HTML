@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>自定义导航</title>
+	<link rel="stylesheet" href="swiper.min.css">
+	<style type="text/css">
+		html,body{
+			position: relative;
+			height: 100%;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 100%;
+			height: 100%;
+		}
+		.swiper-slide{
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+		}
+		.swiper-pagination-bullet{
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			font-size: 12px;
+			color: #000;
+			opacity: 1; /*不透明级别*/
+			background: rgba(0,0,0,0.2);
+		}
+		.swiper-pagination-bullet-active{
+			color: #fff;
+			background: #007aff;
+		}
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+		<div class="swiper-slide" style="background-image: url(1.jpg)"></div>
+		<div class="swiper-slide" style="background-image: url(2.jpg)"></div>
+		<div class="swiper-slide" style="background-image: url(3.jpg)"></div>
+		<div class="swiper-slide" style="background-image: url(4.jpg)"></div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script src='swiper.min.js'></script>
+	<script>
+		var swiper = new Swiper('.swiper-container',{
+			pagination:'.swiper-pagination',
+			paginationClickable:true,
+			paginationBulletRender:function(index,className){
+				return '<span class="'+className+'">'+(index+1)+'</span>';
+			}
+		});
+	</script>
+</body>
+</html>
